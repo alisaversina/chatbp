@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>ChatBP</title>
+		<title>ChatBP Presentation</title>
 		<meta name="keywords" content="ChatBP" />
 		<meta name="description" content="ChatBP" />
 		<link rel="icon" href="" type="image/x-icon">
-		<meta name="theme-color" content="#333">
+		<meta name="theme-color" content="#222">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -15,11 +15,11 @@
 			body {
 			  font-family: "Montserrat", sans-serif;
 			}
-			body, .logo h1 {
+			body, .logo h1, .logo a {
 			  margin: 0;
 			  padding: 0;
 			  box-sizing: border-box;
-			  color: #333;
+			  color: #222;
 			}
 			.header {
 				background-color: #fff;
@@ -87,6 +87,9 @@
 				height: 70px;
 				align-items: center;
 			}
+			.logo a {
+				text-decoration: none;
+			}
 			h2 {
 				margin-top: 75px;
 			}
@@ -102,7 +105,7 @@
 				padding-bottom: 50px;
 			}
 			.purpose {
-				margin-top: 150px;
+				margin-top: 50px;
 			}
 		</style>
 	</head>
@@ -118,15 +121,24 @@
 	    <nav class="nav">
 	      	<div class="container">
             	<div class="logo">
-              		<h1>ChatBP</h1>
+              		<a href="#home" title="Home"><h1>ChatBP</h1></a>
             	</div>  
           		<div class="sublogo">
             		…Be Prosperous
           		</div>
 	      	</div>
 	    </nav>
-		<article class="article">	
-			<div class="container purpose">
+		<article class="article">
+			<div class="purpose" id="home"><p>&nbsp;</p></div>	
+			<div class="container">
+				<h2>From the Creator of idea</h2>
+				<p>When I was hospitalized with severe depression, ChatGPT became my daily companion. I used it to track my mental state: writing down emotional changes and reflections with exact dates and times. Together, we searched for the roots of my condition. Later, I asked the AI to generate reports for my doctors.</p>
+				<p>But ChatGPT wasn’t designed for this. It’s not tailored for structured tracking, therapy, or clinical reporting. I was improvising.</p>
+				<p>That’s how the idea for a dedicated app was born — one that helps people monitor their mental health, reflect through guided AI therapy, and generate detailed reports for specialists.</p>
+				<p>A therapist can’t be there 24/7. But AI can. And long-term tracking of someone’s emotional dynamics is crucial for a correct diagnosis — and ultimately, the right treatment.</p>
+				<p>I deeply believe that we must treat the root causes, not just the symptoms. And therapy is the path to discovering those causes. This isn’t just another app. It could be a turning point in psychiatry.</p>
+			</div>
+			<div class="container">
 				<h2>Purpose</h2>
 				<p>ChatBP is a flexible, accessible, and intuitive app designed to help users — regardless of diagnosis, therapy status, or level of self-awareness — maintain a comprehensive mental health journal using text, voice, biometric data, and AI support.</p>
 				<p>The app isn’t just for tracking — it’s a conversational partner, a supportive guide, and a bridge between the user and their mental health professional.</p>
@@ -275,7 +287,7 @@
 		<script>
 			setTimeout(() => {
 			document.querySelector('.header').style.display = 'none';
-			}, 6000); // чуть дольше чем общее время анимаций
+			}, 6000);
 		</script>
 	</body>
 </html>
