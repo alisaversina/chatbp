@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ChatBP</title>
+		<meta name="keywords" content="ChatBP" />
+		<meta name="description" content="ChatBP" />
+		<link rel="icon" href="" type="image/x-icon">
+		<meta name="theme-color" content="#000180">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  		<style>
+			body {
+			  font-family: "Montserrat", sans-serif;
+			}
+			body, .logo h1 {
+			  margin: 0;
+			  padding: 0;
+			  box-sizing: border-box;
+			  color: #030303;
+			}
+			.header {
+				background-color: #fff;
+				width: 100%;
+				height: 100vh;
+				position: fixed;
+				z-index: 100;
+				top: 0;
+				left: 0;
+				right: 0;
+				display: flex;
+				align-items: center;
+				font-size: 2em;
+				text-align: center;
+				animation-delay: 3s;
+				animation-duration: 3s;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+				animation-name: start;
+			}
+			.header h1, .header p {
+				opacity: 0;
+				animation-duration: 3s;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+			}
+			.header h1 {
+				animation-name: chatbp;
+				animation-delay: 0.3s;
+			}
+			.header p {
+				animation-name: bp;
+				animation-delay: 0.7s;
+			}
+			@keyframes chatbp {
+			  from { opacity: 0; }
+			  to { opacity: 1; }
+			}
+			@keyframes bp {
+			  from { opacity: 0; }
+			  to { opacity: 1; }
+			}
+			@keyframes start {
+			  from { opacity: 1; z-index: 10; }
+			  to { opacity: 0; z-index: 0; }
+			}
+			.container {
+			  max-width: 1050px;
+			  width: 90%;
+			  margin: auto;
+			}
+			.nav {
+				position: fixed;
+				z-index: 2;
+				top: 0;
+				right: 0;
+				left: 0;
+				box-shadow: 0 0 10px 5px #eee;
+				background-color: #fff;
+				padding-top: 10px;
+			}
+			.nav .container {
+				display: flex;
+				justify-content: space-between;
+				height: 70px;
+				align-items: center;
+			}
+			h2 {
+				margin-top: 75px;
+			}
+			h5 {
+				margin-left: 50px;
+			}
+			.article {
+				font-size: 1.7em;
+				line-height: 1.7;
+			}
+			.article .container {
+				border-bottom: 1px solid #eee;
+				padding-bottom: 50px;
+			}
+			.purpose {
+				margin-top: 150px;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div>
+					<h1>ChatBP</h1>
+					<p>…Be Prosperous</p>
+				</div>
+			</div>
+		</header>
+	    <nav class="nav">
+	      	<div class="container">
+            	<div class="logo">
+              		<h1>ChatBP</h1>
+            	</div>  
+          		<div class="sublogo">
+            		…Be Prosperous
+          		</div>
+	      	</div>
+	    </nav>
+		<article class="article">	
+			<div class="container purpose">
+				<h2>Purpose</h2>
+				<p>ChatBP is a flexible, accessible, and intuitive app designed to help users — regardless of diagnosis, therapy status, or level of self-awareness — maintain a comprehensive mental health journal using text, voice, biometric data, and AI support.</p>
+				<p>The app isn’t just for tracking — it’s a conversational partner, a supportive guide, and a bridge between the user and their mental health professional.</p>
+			</div>
+			<div class="container">
+				<h2>Target Audience</h2>
+				<ul>
+					<li>Individuals with official diagnoses (e.g. depression, bipolar disorder, PTSD)</li>
+					<li>People without a diagnosis but experiencing emotional instability</li>
+					<li>Those interested in self-therapy and self-exploration</li>
+					<li>Professionals: psychologists, psychiatrists, therapists, coaches</li>
+					<li>Medical institutions and clinics</li>
+				</ul>
+			</div>
+			<div class="container">
+				<h2>Interaction Formats</h2>
+				<ul>
+					<li>Real-time speech-to-text input</li>
+					<li>Text entry (manual or pasted)</li>
+					<li>Smartwatch sensor/API data (heart rate, temperature, activity, sleep)</li>
+					<li>AI-initiated check-ins, questions, and reminders</li>
+					<li>Flexible voice commands (e.g., “Write BP”, “Fix BP”, “Thanks BP”)</li>
+				</ul>
+			</div>
+			<div class="container">
+				<h2>Core Features</h2>
+				<ul>
+					<li>Conversational support — an “empathetic companion”</li>
+					<li>Automatic message tagging (#state, #reflection, #flashback, #suicidal_thoughts, etc.)</li>
+					<li>Report generation on request (by user or specialist)</li>
+					<li>Behavior and state pattern analysis</li>
+					<li>Dialog initiation based on sudden changes in biometrics, prolonged silence, or user-set rules</li>
+					<li>Specialist dashboard: personalized charts, timelines, trigger mapping, filtered data</li>
+				</ul>
+			</div>
+			<div class="container">
+				<h2>Chat Structure</h2>
+				<ul>
+					<li><strong>User-AI chat</strong> — the primary space for emotional logging</li>
+					<li><strong>Doctor-patient chat</strong> — if a user connects a professional</li>
+					<li><strong>Doctor-AI chat</strong> — for requesting reports, filtering, and support Specialists can view a patient's history with AI, get alerts on concerning patterns, activate features — but do not intervene directly in the user’s private chat.</li>
+				</ul>
+			</div>
+			<div class="container">
+				<h2>Unique Features</h2>
+				<ul>
+					<li><strong>Multimodal input:</strong> one continuous thread including voice, text, biometrics, and visuals</li>
+					<li><strong>Contextual adaptability:</strong> AI adjusts to user’s pace, tone, emotional rhythm</li>
+					<li><strong>Self-learning AI:</strong> suggests product improvements to developers</li>
+					<li><strong>Data protection and tiered privacy settings</strong> (e.g. AI-only, AI+doctor, etc.)</li>
+				</ul>
+			</div>
+			<div class="container">
+				<h2>Monetization</h2>
+					<h3>For users and self-reflectors:</h3>
+					<ul>
+						<li>Free access to basic AI chat</li>
+						<li>Paid subscription unlocks specialist connection, report downloads, wearable integrations</li>
+						<li>Option to be covered by insurance if referred by a healthcare provider</li>
+					</ul>
+					<h3>For professionals:</h3>
+					<ul>
+						<li>Free access for up to 3 patients</li>
+						<li>Tiered subscription plans (e.g. 3, 5, 10, 50, 100+ clients)</li>
+						<li>Optional: per-client pricing model with scaling discounts</li>
+					</ul>
+					<h3>For clinics and medical institutions:</h3>
+					<ul>
+						<li>Subscription based on number of patients and specialists</li>
+					</ul>
+			</div>
+			<div class="container">
+				<h2>Market & Competitor Analysis</h2>
+				<ol>
+					<li>
+						<h4>Woebot</h4>
+						<ul>
+							<li>AI-based CBT chatbot available 24/7</li>
+							<li>Tracks mood, gratitude journaling, mindfulness exercises</li>
+						</ul>
+						<h5>Limitations:</h5>
+						<ul>			
+							<li>Text-only interaction</li>
+							<li>No biometric integration</li>
+							<li>No voice input or state recognition</li>
+						</ul>		
+					</li>
+					<li>
+						<h4>Youper</h4>
+						<ul>
+							<li>AI app using CBT to support emotional health</li>
+							<li>Daily mood check-ins, thought tracking, symptom scoring</li>
+						</ul>
+						<h5>Limitations:</h5>
+						<ul>			
+							<li>No free version</li>
+							<li>No biometric data integration</li>
+							<li>No voice input</li>
+						</ul>		
+					</li>
+					<li>
+						<h4>Moodpath (now MindDoc)</h4>
+						<ul>
+							<li>Tracks mood and identifies depressive/anxious symptoms</li>
+							<li>Report generation for professionals</li>
+						</ul>
+						<h5>Limitations:</h5>
+						<ul>			
+							<li>Text-only interface</li>
+							<li>No physiological data support</li>
+							<li>No voice input or intelligent state recognition</li>
+						</ul>		
+					
+					</li>
+				</ol>
+			</div>
+			<div class="container">
+				<h2>ChatBP Advantages</h2>
+				<ul>
+					<li><strong>Multimodal input:</strong> text, voice, and biometric triggers — no buttons needed</li>
+					<li><strong>Physiological integration:</strong> smart device data for deeper state awareness</li>
+					<li><strong>Advanced chat structure:</strong> separates private AI chat from professional interaction</li>
+					<li><strong>Intelligent tagging:</strong> AI applies tags for easier navigation and analysis</li>
+					<li><strong>Proactive AI:</strong> initiates interactions based on patterns, not just user requests</li>
+					<li><strong>Therapeutic flexibility:</strong> AI or specialists can tailor therapeutic approaches beyond CBT</li>
+					<li><strong>Offline mode:</strong> Ability to log states without internet. Data is stored in a local file and automatically synced when back online.</li>
+				</ul>
+			</div>
+			<div class="container">
+				<h2>Why OpenAI</h2>
+				<p>ChatGPT is — in the founder’s view — the best in its class.</p>
+				<p>It already includes many ChatBP essentials: voice input, empathetic tone, contextual memory.</p>
+				<p>Only a few elements remain: integration with smart devices, state-based activation, flexible voice commands like “Write BP”, “Fix BP”, and “Thanks BP”.</p>
+			</div>
+		</article>
+		<aside id="contacts">
+			<div class="container">
+				<p>&nbsp;</p>
+			</div>
+		</aside>
+		<footer class="footer">
+			<div class="container">
+				<p>&nbsp;</p>
+			</div>
+		</footer>
+		<script>
+			setTimeout(() => {
+			document.querySelector('.header').style.display = 'none';
+			}, 6000); // чуть дольше чем общее время анимаций
+		</script>
+	</body>
+</html>
